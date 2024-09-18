@@ -1,0 +1,91 @@
+body {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive; 
+    background-color: #FFEB3B; 
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    overflow: hidden; 
+}
+
+/* Board styling */
+#board {
+    background-image: url("./flappybirdbg.png");
+    background-size: cover; 
+    background-position: center;
+    border: 6px solid #FF5722; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); 
+    border-radius: 30px; 
+    position: relative;
+}
+
+/* Score styling */
+#score {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive; 
+    font-size: 50px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
+/* Game over text styling */
+#game-over {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    font-size: 60px;
+    color: #E91E63; 
+    text-align: center;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: none; 
+}
+
+/* Bird styling */
+#bird {
+    transition: transform 0.05s ease-in-out;
+}
+
+/* Pipe styling */
+.pipe {
+    transition: transform 0.05s ease-in-out;
+}
+
+/* Button styling for any game start or reset buttons */
+button {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    font-size: 22px;
+    background-color: #8BC34A; 
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); 
+}
+
+button:hover {
+    background-color: #7CB342; 
+}
+
+/* Add playful animations */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Make the bird bounce subtly */
+#bird {
+    animation: bounce 1s infinite;
+}
+
